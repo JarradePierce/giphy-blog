@@ -5,8 +5,8 @@
       <div class='form-inputs'>
         <%= form_for(@user) do |f| %>
           <%= f.text_field :username,placeholder: 'Username', class: 'register-input' %><br>
-          <%= f.text_field :email, placeholder: 'Email', class: 'register-input' %><br>
-          <%= f.text_field :password, placeholder: 'Password', class: 'register-input' %><br>
+          <%= f.email_field :email, placeholder: 'Email', class: 'register-input' %><br>
+          <%= f.password_field :password, placeholder: 'Password', class: 'register-input' %><br>
           <button class='btn register-submit' type='submit'>Submit</button>
         <% end %>
       </div>
