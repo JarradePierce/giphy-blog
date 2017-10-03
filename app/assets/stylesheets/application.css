@@ -184,4 +184,11 @@ Blogs show page
   #blog-show-card{
     width: 100%;
   }
+
+  /*
+    blog new page
+  */
+  .new-blog-body{
+    width: 100%;
+  }
 }
