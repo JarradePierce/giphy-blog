@@ -8,7 +8,7 @@ module GiphysHelper
     data = JSON.parse(response.read_body)
     @giphy = data["data"]
     @giphys = []
-    @giphy.each do |hash|
+    @giphys.each do |hash|
       @giphys << hash["images"]["fixed_height"]["url"]
     end
     @giphys
