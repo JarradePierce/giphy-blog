@@ -1,0 +1,9 @@
+<div class='card blog-show-card' id='blog-show-card'>
+  <div class='card-block'>
+    <% @giphys.each do |giphy| %>
+    <img src='<%= giphy %>' class='card-img-top'>
+    <% end %>
+    <h3 class='card-title'><%= @blog.title %></h3>
+    <p class='card-text blog-show-body'><%= @blog.body %></p>
+  </div>
+</div>

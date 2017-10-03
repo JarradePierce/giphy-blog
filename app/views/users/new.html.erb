@@ -1,0 +1,15 @@
+<div class='new-user-container'>
+  <div class='jumbotron' id='new-user-jumbo'>
+    <h2 class='register-intro'> Welcome to Giphy blog register and start blogin</h2>
+    <div class='register-form-container'>
+      <div class='form-inputs'>
+        <%= form_for(@user) do |f| %>
+          <%= f.text_field :username,placeholder: 'Username', class: 'register-input' %><br>
+          <%= f.text_field :email, placeholder: 'Email', class: 'register-input' %><br>
+          <%= f.text_field :password, placeholder: 'Password', class: 'register-input' %><br>
+          <button class='btn register-submit' type='submit'>Submit</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

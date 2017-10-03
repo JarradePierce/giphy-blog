@@ -1,0 +1,9 @@
+<% @blogs.each do |blog|%>
+  <div class='card' id='blog-show-card'>
+    <div class='card-block'>
+      <h3 class='card-title'><%= blog.title %></h3>
+      <p class='card-text'><%= blog.body %></p>
+      <%= button_to "Blog", user_blog_path(blog.user_id, blog), :method => "get", class: "btn btn-success"%>
+    </div>
+  </div>
+<% end %>

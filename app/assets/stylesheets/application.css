@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .container{
+  font-family: 'Questrial', sans-serif;
+ }
+ .icon{
+  font-family: 'Abril Fatface', cursive;
+ }
+.nav-item{
+  margin-left :1em;
+  margin-right: 1em;
+}
+.jumbotron{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#user-jumbo{
+  background-color: #000;
+  color: #fff;
+}
+.card{
+  height: auto;
+  border: 2px solid #000;
+  margin-top: 10px;
+  padding: 0;
+}
+#blog-show-card{
+  width: 70%;
+  margin: 0 auto;
+}
+.card-text{
+  text-align: center;
+}
+.card-title{
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+.card-button-list{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.card-button{
+  display: inline-block;
+}
+.card-img-top{
+  width: 100%;
+}
+.container{
+  width: 40%;
+}
+
+/*
+  navigation
+*/
+.home-button{
+  background-color: #30A9DE;
+  color: #fff;
+}
+.register-button{
+  background-color: #EFDC05;
+  color: #fff;
+}
+.signout-button{
+  background-color: #E53A40;
+  color: #fff;
+}
+.profile-button{
+  background-color: #EFDC05;
+  color: #fff;
+}
+
+/*
+  User show page
+*/
+.username-header{
+  font-family: 'Abril Fatface', cursive;
+}
+.blog-show-button{
+  background-color: #30A9DE;
+  color: #fff;
+}
+.blog-edit-button{
+  background-color: #EFDC05;
+  color: #fff;
+}
+.blog-delete-button{
+  background-color: #E53A40;
+  color: #fff;
+}
+.new-blog-button{
+  background-color: #30A9DE;
+  color: #fff;
+}
+/*
+Register page
+*/
+.register-intro{
+  color: #EFDC05;
+}
+.register-form-container{
+  width: 35%;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10px 10px;
+  background-color: #30A9DE;
+}
+.register-submit{
+  margin-top: 10px;
+  background-color: #E53A40;
+  color: #fff;
+}
+.register-input{
+  margin-top: 8px;
+}
+#new-user-jumbo{
+  background-color: #090707;
+}
+
+/*
+ New Blog page
+*/
+.new-blog-body{
+  width: 60%;
+  height: 300px;
+}
+.new-blog-title{
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+/*
+Blogs show page
+*/
+.card-text{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.blog-show-body{
+  width: 100%;
+}
+
+
+/*
+  Tablet and mobile 
+*/
+@media (max-width: 600px) and (min-width: 200px){
+  /*
+  main container
+  */
+  .container{
+    width: 100%;
+  }
+  .nav-item{
+    margin: 0;
+    padding: 0;
+  }
+
+/*
+  register page
+*/
+  .register-form-container{
+    width: 100%;
+  }
+
+  /*
+  blogs show page
+  */
+  #blog-show-card{
+    width: 100%;
+  }
+}
