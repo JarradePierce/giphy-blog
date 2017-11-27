@@ -7,3 +7,7 @@
     <p class='card-text blog-show-body'><%= @blog.body %></p>
   </div>
 </div>
+
+<% @giphys.each do |giphy| %>
+  <p><%= giphy %></p>
+<% end %>

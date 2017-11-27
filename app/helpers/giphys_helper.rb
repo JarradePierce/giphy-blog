@@ -1,17 +1,17 @@
 module GiphysHelper
 
   def search_gif(search)
-    HTTParty.get("http://api.giphy.com/v1/gifs/search?q=#{search}&limit=1&api_key=#{ENV["GIPHY_ID"]}")
+    HTTParty.get("http://api.giphy.com/v1/gifs/search?q=food&limit=1&api_key=dc6zaTOxFJmzC")
   end
 
   def parse_giphy(response)
     data = JSON.parse(response.read_body)
     @giphy = data["data"]
     @giphys = []
-    @giphys.each do |hash|
+    @giphy.each do |hash|
       @giphys << hash["images"]["fixed_height"]["url"]
     end
-    @giphys
+    p @giphys
   end
 
 end
