@@ -110,14 +110,14 @@
 Register page
 */
 .register-intro{
-  color: #EFDC05;
+  color: #000;
 }
 .register-form-container{
   width: 35%;
   height: 200px;
   margin: 0 auto;
   border-radius: 10px 10px;
-  background-color: #30A9DE;
+  background-color: #D3D3D3;
 }
 .register-submit{
   margin-top: 10px;
@@ -128,7 +128,7 @@ Register page
   margin-top: 8px;
 }
 #new-user-jumbo{
-  background-color: #090707;
+  background-color: #fff;
 }
 
 /*
@@ -157,7 +157,7 @@ Blogs show page
 
 
 /*
-  Tablet and mobile 
+  Tablet and mobile
 */
 @media (max-width: 600px) and (min-width: 200px){
   /*

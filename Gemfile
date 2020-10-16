@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.4'
 
 gem 'figaro'
 
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -59,7 +60,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 

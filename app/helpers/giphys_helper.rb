@@ -1,7 +1,7 @@
 module GiphysHelper
 
   def search_gif(search)
-    HTTParty.get("http://api.giphy.com/v1/gifs/search?q=#{search}&limit=1&api_key=#{ENV["GIPHY_ID"]}")
+    HTTParty.get("https://api.giphy.com/v1/gifs/search?api_key=#{ENV["GIPHY_ID"]}&q=#{search}&limit=1&offset=0&rating=r&lang=en")
   end
 
   def parse_giphy(response)
@@ -14,4 +14,4 @@ module GiphysHelper
     @giphys
   end
 
-end   
+end

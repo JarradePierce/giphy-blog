@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -18,7 +18,7 @@
 
 <body>
   <div class='container'>
-    <h1 class='icon'><a>Giphy Blog</a></h1>
+    <h1 class='icon'><a>Giphy Notes</a></h1>
       <ul class="nav nav-pills justify-content-center">
         <li class='nav-link'>
           <%= button_to 'Home', root_path, method: :get, class: 'btn home-button' %>
@@ -39,7 +39,7 @@
           </li>
         <% end %>
       </ul>
-    
+
     <%= yield %>
 
     </div>
