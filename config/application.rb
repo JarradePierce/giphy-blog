@@ -18,3 +18,7 @@ module GiphyBlog
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+EmailDetected.config do |config|
+  config.verifier_email = ENV['SENDER_EMAIL_DETECTED']
+end
