@@ -17,7 +17,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to user_path(@user), notice: "created new blog" }
+        format.html { redirect_to user_blog_path(@user, @blog), notice: "created new blog" }
         format.json { render :show, status: :created, location: @blog }
       else
         format.html { redirect_to user_path(@user), notice: "failed to create blog" }
@@ -64,7 +64,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def blog_params
     params.require(:blog).permit(:title, :body, :user_id)
