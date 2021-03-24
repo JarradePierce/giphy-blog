@@ -3,7 +3,10 @@ class UsersController < ApplicationController
 
   def show
     @user = find_user
-    @blogs = @user.blogs
+    @blogs = []
+    @user.blogs.each do |blog|
+      @blogs.unshift(blog)
+    end
   end
 
   def new
