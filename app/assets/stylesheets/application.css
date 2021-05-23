@@ -23,6 +23,9 @@
   margin-left :1em;
   margin-right: 1em;
 }
+.nav{
+  border-bottom: 2px solid #000;
+}
 .jumbotron{
   text-align: center;
   margin: 0;
@@ -34,9 +37,11 @@
 }
 .card{
   height: auto;
-  border: 2px solid #000;
   margin-top: 10px;
   padding: 0;
+}
+.card-block{
+  border: 2px solid #fff;
 }
 #blog-show-card{
   width: 70%;
@@ -60,26 +65,41 @@
 .card-img-top{
   width: 100%;
 }
-.container{
-  width: 40%;
-}
 
 /*
   navigation
 */
 .home-button{
-  background-color: #30A9DE;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #30A9DE;
+}
+.home-button:hover{
   color: #fff;
+  background-color: #30A9DE;
 }
 .register-button{
+  color: #000;
+  border: 2px solid #EFDC05;
+}
+.register-button:hover{
   background-color: #EFDC05;
-  color: #fff;
 }
 .signout-button{
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #E53A40;
+}
+.signout-button:hover{
   background-color: #E53A40;
   color: #fff;
 }
 .profile-button{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #EFDC05;
+}
+.profile-button:hover{
   background-color: #EFDC05;
   color: #fff;
 }
@@ -153,6 +173,18 @@ Blogs show page
 }
 .blog-show-body{
   width: 100%;
+}
+.giphy-img{
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+/*
+  footer
+ */
+footer{
+  margin-top: 4em;
+  border-top: 2px solid #ABB8B8;
 }
 
 

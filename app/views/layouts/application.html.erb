@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GiphyBlog</title>
+    <title>Giphy Notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Questrial" rel="stylesheet">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
 <body>
@@ -41,6 +40,16 @@
       </ul>
 
     <%= yield %>
+    <footer>
+      <div class='container'>
+        <h1 class='icon'>More Apps:</h1>
+        <ul class='nav nav-pills justify-content-center'>
+          <li class='nav-link'>link</li>
+          <li class='nav-link'>link</li>
+          <li class='nav-link'>link</li>
+        </ul>
+      </div>
+    </footer>
 
     </div>
 
