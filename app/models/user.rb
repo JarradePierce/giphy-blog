@@ -4,4 +4,5 @@ class User < ApplicationRecord
   validates :username, :email, uniqueness: true
 
   has_many :blogs
+  has_many :categories
 end
