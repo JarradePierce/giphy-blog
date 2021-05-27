@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        @defaultCategory = @user.categories.create(title: 'default', user_id: @user.id)
         session[:id] = @user.id
         format.html { redirect_to @user, notice: "#{@user.username}'s' new account created" }
         format.json { render :show, status: :created, location: @user }

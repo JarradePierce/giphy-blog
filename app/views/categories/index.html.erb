@@ -1,0 +1,15 @@
+<ul class='card-button-list'>
+  <li class='card-button'>
+    <%= button_to "New Category", new_user_category_path(@user), method: "get", class: "btn new-category-button" %>
+  </li>
+</ul>
+<% @categories.each do |category|%>
+  <div class='card' id='blog-show-card'>
+    <div class='card-block'>
+      <h3 class='card-title'><%= category.title %></h3>
+      <% category.blogs.each do |blog| %>
+        <p class='card-text'><%= blog.title %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>

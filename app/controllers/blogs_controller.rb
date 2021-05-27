@@ -7,12 +7,19 @@ class BlogsController < ApplicationController
   end
 
   def new
-    @user = current_user.id
+    @user = current_user
     @blog = Blog.new
+    @userCategories = current_user.categories
+
+    @categoriesHash = Hash.new
+
+    @userCategories.each do |category|
+      @categoriesHash[category.title] = category.id
+    end
   end
 
   def create
-    @user = current_user.id
+    @user = current_user
     @blog = Blog.new(blog_params)
 
     respond_to do |format|
@@ -67,7 +74,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :body, :user_id)
+    params.require(:blog).permit(:title, :body, :user_id, :category_id)
   end
 
   def find_blog

@@ -2,7 +2,10 @@
   <h2 class='username-header'><%= @user.username %></h2>
 
   <% if current_user.id == @user.id %>
-    <%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %>
+  <ul class='card-button-list'>
+    <li class='card-button'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %></li>
+    <li class='card-button'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
+  </ul>
   <% end %>
 
 </div>
