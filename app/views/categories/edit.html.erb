@@ -1,0 +1,10 @@
+<div class='jumbotron'>
+  <h3><%= @category.title %></h3>
+  <div class='blog-form-container'>
+    <%= form_for @category, url: { action: "update" } do |f| %>
+      <%= f.text_field :title, placeholder: "Title", class: "new-category-title" %><br />
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <button class='btn btn-success new-category-submit' type='submit'>Update Category</button>
+    <% end %>
+  </div>
+</div>

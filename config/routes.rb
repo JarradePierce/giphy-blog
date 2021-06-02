@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :blogs, only: [:edit, :update, :destroy, :show, :create, :new]
-    resources :categories, only: [:show, :create, :update, :destroy, :new, :index]
+    resources :categories, only: [:show, :create, :update, :destroy, :edit, :new, :index]
   end
 
   resources :sessions, only: [:create, :new, :destroy]
