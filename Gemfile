@@ -59,11 +59,12 @@ group :development do
 end
 
 group :development do
-  gem 'sqlite3', '~>1.4.2'
+  # gem 'sqlite3', '~>1.4.2'
+  gem 'pg'
 end
 
 group :production do
-  gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
