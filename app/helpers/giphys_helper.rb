@@ -14,4 +14,10 @@ module GiphysHelper
     @giphys
   end
 
+  def find_giphy(blog)
+    @giphy_blog = blog
+    searched_gif = search_gif(@giphy_blog.title)
+    @giphy = parse_giphy(searched_gif)
+  end
+
 end

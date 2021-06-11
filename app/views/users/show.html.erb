@@ -7,16 +7,15 @@
     <li class='card-button'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
   </ul>
   <% end %>
-
 </div>
 
 <div class='new-blog-form-container'>
-  <div class='row'>
   <% @blogs.each do |blog| %>
-    <div class='col-lg-6'>
+    <div class='col'>
       <div class='card'>
         <div class='card-block'>
           <h3 class='card-title'><%= blog.title %></h3>
+          <p class='card-body'><%= blog.body %></p>
           <ul class='card-button-list'>
             <li class='card-button'><%= button_to "Show", user_blog_path(@user, blog), :method => "get", class: "btn blog-show-button"%></li>
               <% if current_user.id == @user.id %>
@@ -26,7 +25,6 @@
           <ul>
         </div>
       </div>
-    </div>
+      </div>
   <% end %>
-  </div>
 </div>

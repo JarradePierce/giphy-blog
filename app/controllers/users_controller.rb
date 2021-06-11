@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   include SessionsHelper
+  include GiphysHelper
 
   def show
     @user = find_user

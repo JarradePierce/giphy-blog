@@ -35,7 +35,7 @@ class BlogsController < ApplicationController
 
   def show
     @blog = find_blog
-    @giphys = find_giphy
+    @giphys = find_giphy(@blog)
   end
 
   def edit
@@ -81,10 +81,10 @@ class BlogsController < ApplicationController
     Blog.find(params[:id])
   end
 
-  def find_giphy
-    @giphy_blog = find_blog
-    searched_gif = search_gif(@giphy_blog.title)
-    @giphy = parse_giphy(searched_gif)
-  end
+  # def find_giphy
+  #   @giphy_blog = find_blog
+  #   searched_gif = search_gif(@giphy_blog.title)
+  #   @giphy = parse_giphy(searched_gif)
+  # end
 
 end
