@@ -24,17 +24,10 @@
   margin-left :1em;
   margin-right: 1em;
 }
-.nav{
-  border-bottom: 2px solid #000;
-}
 .jumbotron{
   text-align: center;
   margin: 0;
   padding: 0;
-}
-#user-jumbo{
-  background-color: #000;
-  color: #fff;
 }
 .card{
   height: auto;
@@ -59,6 +52,11 @@
   margin: 0;
   padding: 0;
   text-align: center;
+}
+.user-card-button-list{
+  text-align: center;
+  padding: 0;
+  margin-top: 4em;
 }
 .card-button{
   display: inline-block;
@@ -108,6 +106,14 @@
 /*
   User show page
 */
+#user-jumbo{
+  background-color: #fff;
+  color: #000;
+  height: 10em;
+  width: 96%;
+  margin: 0 auto;
+  border: 2px solid #000;
+}
 .card-title{
   color: #fff;
 }
@@ -122,6 +128,7 @@
 }
 .username-header{
   font-family: 'Abril Fatface', cursive;
+  padding-top: .2em;
 }
 .blog-show-button{
   background-color: #30A9DE;
@@ -212,10 +219,25 @@ footer{
   */
   .container{
     width: 100%;
+    padding: 0;
   }
   .nav-item{
     margin: 0;
     padding: 0;
+  }
+  .col.user-show-cards{
+    width: 100%;
+    padding: 0;
+  }
+
+/*
+  Login form
+*/
+  .email-field{
+    margin-bottom: .2em;
+  }
+  .password-field{
+    margin-bottom: .2em;
   }
 
 /*

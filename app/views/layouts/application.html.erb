@@ -30,9 +30,9 @@
           <%= button_to "Sign Out", logout_path, method: :delete, class: 'btn signout-button' %>
         </li>
         <% else %>
-          <li class='nav-link'>
+          <!-- <li class='nav-link'>
             <%= button_to 'Register', new_user_path, method: :get, class: 'btn register-button' %>
-          </li>
+          </li> -->
           <li class='nav-link'>
             <%= render "sessions/new" %>
           </li>
