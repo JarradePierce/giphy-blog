@@ -7,14 +7,14 @@
   <div class='card' id='blog-show-card'>
     <div class='card-block'>
       <h3 class='card-title'><%= category.title %></h3>
-      <ul class="nav nav-pills justify-content-center">
-        <li class='nav-link'>
-          <%= button_to 'edit', edit_user_category_path(@user, category), method: :get, class: 'btn home-button' %>
+      <ul class="card-button-list">
+        <li class='card-button'>
+          <%= button_to 'Edit', edit_user_category_path(@user, category), method: :get, class: 'btn home-button' %>
+        </li>
+        <li class='card-button'>
+          <%= button_to 'Show', user_category_path(@user, category), method: :get, class: 'btn login-button' %>
         </li>
       </ul>
-      <% category.blogs.each do |blog| %>
-        <%= button_to blog.title, user_blog_path(blog.user_id, blog), :method => "get", class: "btn btn-success"%>
-      <% end %>
     </div>
   </div>
 <% end %>

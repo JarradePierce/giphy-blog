@@ -1,0 +1,19 @@
+<div class='jumbotron' id='user-jumbo'>
+  <h2 class='username-header'><%= @category.title %></h2>
+  <ul>
+    <li class='card-button'>
+      <%= button_to 'Edit', edit_user_category_path(@category), method: :get, class: 'btn home-button' %>
+    </li>
+  </ul>
+</div>
+
+<% @blogs.each do |blog|%>
+<div class='col user-show-cards'>
+  <div class="card">
+    <div class="card-block">
+      <h3 class='card-title'><%= blog.title %></h3>
+      <p class='card-body category-card-body'><%= blog.body %></p>
+    </div>
+  </div>
+</div>
+<% end %>

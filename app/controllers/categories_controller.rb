@@ -10,6 +10,14 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories
   end
 
+  def show
+      @category = find_category
+      @blogs = []
+      @category.blogs.each do |blog|
+        @blogs.unshift(blog)
+      end
+  end
+
   def create
     @user = current_user
     @category = Category.new(category_params)
