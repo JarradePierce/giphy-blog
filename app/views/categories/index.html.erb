@@ -3,7 +3,7 @@
     <%= button_to "New Category", new_user_category_path(@user), method: "get", class: "btn new-category-button" %>
   </li>
 </ul>
-<% @categories.each do |category|%>
+<% @categories_container.each do |category|%>
   <div class='card' id='blog-show-card'>
     <div class='card-block'>
       <h3 class='card-title'><%= category.title %></h3>

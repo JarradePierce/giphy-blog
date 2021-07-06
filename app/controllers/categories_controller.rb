@@ -7,7 +7,12 @@ class CategoriesController < ApplicationController
 
   def index
     @user = current_user
-    @categories = current_user.categories
+    @categories = @user.categories
+    @categories_container = []
+
+    @categories.each do |category|
+      @categories_container.unshift(category)
+    end
   end
 
   def show

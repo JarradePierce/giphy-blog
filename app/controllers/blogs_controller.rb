@@ -4,6 +4,11 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @blogs_container = []
+
+    @blogs.each do |blog|
+      @blogs_container.unshift(blog)
+    end
   end
 
   def new
@@ -80,11 +85,5 @@ class BlogsController < ApplicationController
   def find_blog
     Blog.find(params[:id])
   end
-
-  # def find_giphy
-  #   @giphy_blog = find_blog
-  #   searched_gif = search_gif(@giphy_blog.title)
-  #   @giphy = parse_giphy(searched_gif)
-  # end
 
 end
