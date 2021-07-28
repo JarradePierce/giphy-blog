@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+      @user = current_user
       @category = find_category
       @blogs = []
       @category.blogs.each do |blog|
