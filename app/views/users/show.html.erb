@@ -15,7 +15,7 @@
       <div class='card'>
         <div class='card-block'>
           <h3 class='card-title'><%= blog.title %></h3>
-          <p class='card-body'><%= blog.body %></p>
+          <pre class='card-body'><%= blog.body %></pre>
           <ul class='card-button-list'>
             <li class='card-button'><%= button_to "Show", user_blog_path(@user, blog), :method => "get", class: "btn blog-show-button"%></li>
               <% if current_user.id == @user.id %>

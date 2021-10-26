@@ -4,6 +4,8 @@
     <img src='<%= giphy %>' class='giphy-img card-img-fluid'>
     <% end %>
     <h3 class='card-title'><%= @blog.title %></h3>
-    <div class='card-text blog-show-body'><%= @blog.body %></div>
+    <div class='card-text blog-show-body'>
+      <pre class='card-text'><%= @blog.body %></pre>
+    </div>
   </div>
 </div>
