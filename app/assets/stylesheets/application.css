@@ -15,7 +15,9 @@
  */
 
  pre{
+   width: 95%
    color: #fff;
+   white-space: pre-wrap;
  }
  .container{
   width: 70%;
