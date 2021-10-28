@@ -4,8 +4,12 @@
     <%= form_for @blog, url: { action: "update" } do |f| %>
       <%= f.text_field :title, placeholder: "Title", class: "new-blog-title" %><br />
       <%= f.text_area :body, placeholder: "Body", class: "new-blog-body" %><br />
+      <%= f.select :points, @points_hash %>
+      <%= f.select :category_id, @categoriesHash %>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <button class='btn btn-success new-blog-submit' type='submit'>Update Blog</button>
+      <label for="completed"> Completed</label>
+      <%= f.check_box :completed, value: 0 %>
     <% end %>
   </div>
 </div>

@@ -1,21 +1,22 @@
 class BlogsController < ApplicationController
   include GiphysHelper
   include SessionsHelper
+  include BlogsHelper
 
   def index
     @blogs = Blog.all
     @blogs_container = []
 
-    @blogs.each do |blog|
-      @blogs_container.unshift(blog)
-    end
+    # display notes from newest to oldest
+    reverse_blog_order(@blogs)
   end
 
   def new
     @user = current_user
     @blog = Blog.new
-    @userCategories = current_user.categories
+    @points_hash = points_hash
 
+    @userCategories = current_user.categories
     @categoriesHash = Hash.new
 
     @userCategories.each do |category|
@@ -45,14 +46,27 @@ class BlogsController < ApplicationController
 
   def edit
     @blog = find_blog
+    @points_hash = points_hash
+    @userCategories = current_user.categories
+    @categoriesHash = Hash.new
+
+    @userCategories.each do |category|
+      @categoriesHash[category.title] = category.id
+    end
   end
 
   def update
     @blog = find_blog
+    @user = current_user
 
     respond_to do |format|
       if @blog && @blog.user_id == current_user.id
         @blog.update(blog_params)
+        if @blog.completed == true
+          updatedPoints = @user.points += @blog.points
+          @user.update(points: updatedPoints)
+          @blog.update(points: 0)
+        end
         format.html { redirect_to user_blog_path(@blog.user_id, @blog), notice: "Blog updated" }
         format.json { render :show, status: :created, location: @blog }
       else
@@ -60,6 +74,10 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def update_points
+    @user.points += @blog.points
   end
 
   def destroy
@@ -79,7 +97,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :body, :user_id, :category_id)
+    params.require(:blog).permit(:title, :body, :user_id, :category_id, :points, :completed)
   end
 
   def find_blog
