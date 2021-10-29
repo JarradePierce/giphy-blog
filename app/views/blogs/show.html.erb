@@ -3,10 +3,10 @@
     <% @giphys.each do |giphy| %>
     <img src='<%= giphy %>' class='giphy-img card-img-fluid'>
     <% end %>
-    <h2 class='points-display'><%= @blog.points %></h2>
+    <h2 class='points-display'>Points <%= @blog.points %></h2>
     <h3 class='card-title'><%= @blog.title %></h3>
     <div class='card-text blog-show-body'>
-      <pre class='card-text'><%= @blog.body %></pre>
+      <pre class='card-body'><%= @blog.body %></pre>
     </div>
   </div>
 </div>
