@@ -19,14 +19,9 @@
    white-space: pre-wrap;
  }
 
- /* points */
- .points-display{
-   color: #fff;
- }
-
  /* Containers and cards */
  .container{
-  width: 70%;
+  width: 75%;
   font-family: 'Questrial', sans-serif;
  }
  .icon{
@@ -203,6 +198,7 @@ Blogs show page
   margin: 0;
   padding: 0;
   text-align: left;
+  color: #fff;
 }
 .blog-show-body{
   width: 100%;
@@ -217,9 +213,6 @@ Blogs show page
 /*
 Category
  */
-.category-card-body{
-
-}
 .category-notes-list{
   margin-bottom: 1em;
 }
@@ -232,11 +225,16 @@ footer{
   border-top: 2px solid #ABB8B8;
 }
 
+/* points */
+.points-display{
+  color: #fff;
+}
+
 
 /*
   Tablet and mobile
 */
-@media (max-width: 600px) and (min-width: 200px){
+@media (max-width: 950px) and (min-width: 200px){
   /*
   main container
   */
