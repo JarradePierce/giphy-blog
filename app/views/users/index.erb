@@ -1,0 +1,18 @@
+<div class="jumbotron" id='user-jumbo'>
+  <h2 class='username-header'><%= @user.username %></h2>
+
+  <% if current_user.id == @user.id %>
+    <ul class='user-card-button-list'>
+      <li class='card-button'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %></li>
+      <li class='card-button'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
+    </ul>
+  <% end %>
+</div>
+
+<div class="users-list-div">
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= link_to user.username, user_path(user.id) %></li>
+    <% end %>
+  </ul>
+</div>

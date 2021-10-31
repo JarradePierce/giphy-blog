@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :blogs, only: [:edit, :update, :destroy, :show, :create, :new]
+    resources :blogs, only: [:edit, :update, :destroy, :show, :create, :new, :index]
     resources :categories, only: [:show, :create, :update, :destroy, :edit, :new, :index]
   end
 

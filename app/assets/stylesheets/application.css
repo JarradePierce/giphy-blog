@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+body{
+  background: #000;
+}
  pre{
    width: 95%;
    white-space: pre-wrap;
@@ -26,6 +28,7 @@
  }
  .icon{
   font-family: 'Abril Fatface', cursive;
+  color: #fff;
  }
 .nav-item{
   margin-left :1em;
@@ -35,6 +38,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 .card{
   height: auto;
@@ -42,7 +46,7 @@
   padding: 0;
 }
 .card-block{
-  border: 2px solid #fff;
+
 }
 #blog-show-card{
   width: 70%;
@@ -54,7 +58,7 @@
 }
 .card-title{
   text-align: center;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #fff;
 }
 .card-button-list{
   margin: 0;
@@ -77,8 +81,8 @@
   navigation
 */
 .home-button{
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   border: 2px solid #30A9DE;
 }
 .home-button:hover{
@@ -86,15 +90,16 @@
   background-color: #30A9DE;
 }
 .register-button{
-  color: #000;
+  background: #000;
+  color: #fff;
   border: 2px solid #EFDC05;
 }
 .register-button:hover{
   background-color: #EFDC05;
 }
 .signout-button{
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   border: 2px solid #E53A40;
 }
 .signout-button:hover{
@@ -102,8 +107,8 @@
   color: #fff;
 }
 .profile-button{
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   border: 2px solid #EFDC05;
 }
 .profile-button:hover{
@@ -115,43 +120,73 @@
   User show page
 */
 #user-jumbo{
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   height: 10em;
   width: 96%;
   margin: 0 auto;
-  border: 2px solid #000;
+  margin-bottom: 1em;
+  border: 1px solid #fff;
 }
 .card-title{
   color: #fff;
 }
 .card-body{
   color: #fff;
+  background-color: #000;
   border-radius: 10px 10px;
-  border: 2px solid #fff;
   padding: 2em;
 }
 .card{
   background: #000;
+  border-radius: 10px 10px;
+  border: 1px solid #fff;
 }
 .username-header{
   font-family: 'Abril Fatface', cursive;
   padding-top: .2em;
 }
 .blog-show-button{
-  background-color: #30A9DE;
+  background-color: #000;
+  border: 2px solid #3B93FC;
   color: #fff;
+}
+.blog-show-button:hover{
+  background-color: #3B93FC;
 }
 .blog-edit-button{
-  background-color: #EFDC05;
+  background-color: #000;
+  border: 2px solid #792AFA;
   color: #fff;
+}
+.blog-edit-button:hover{
+  background-color: #792AFA;
 }
 .blog-delete-button{
-  background-color: #E53A40;
+  background-color: #000;
+  border: 2px solid #E53A40;
   color: #fff;
 }
+.blog-delete-button:hover{
+  background-color: #E53A40;
+}
 .new-blog-button{
-  background-color: #30A9DE;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #03CDED;
+}
+.new-blog-button:hover{
+  background-color: #03CDED;
+  color: #fff;
+  border: 2px solid #03CDED;
+}
+.categories-button{
+  background-color: #000;
+  border: 2px solid #03CDED;
+  color: #fff;
+}
+.categories-button:hover{
+  background-color: #03CDED;
   color: #fff;
 }
 /*
@@ -164,31 +199,44 @@ Register page
   width: 35%;
   height: 200px;
   margin: 0 auto;
+  margin-top: 1em;
+  padding: .5em;
   border-radius: 10px 10px;
-  background-color: #D3D3D3;
+  border: 1px solid #fff;
+  background-color: #000;
 }
 .register-submit{
   margin-top: 10px;
-  background-color: #E53A40;
+  background-color: #000;
   color: #fff;
+  border: 2px solid #fff;
 }
 .register-input{
   margin-top: 8px;
 }
 #new-user-jumbo{
-  background-color: #fff;
+  background-color: #000;
 }
 
 /*
  New Blog page
 */
+.blog-form-container{
+  border: 1px solid #fff;
+  padding: 1em;
+}
 .new-blog-body{
   width: 60%;
   height: 300px;
+  background: #000;
+  border: 1px solid: #fff;
+  color: #fff;
 }
 .new-blog-title{
   width: 40%;
   margin-bottom: 10px;
+  background: #000;
+  color: #fff;
 }
 
 /*
@@ -201,8 +249,11 @@ Blogs show page
   color: #fff;
 }
 .blog-show-body{
+  margin-top: 1em;
   width: 100%;
   color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px 10px;
 }
 .giphy-img{
   width: 100%;
@@ -230,6 +281,24 @@ footer{
   color: #fff;
 }
 
+.user-points{
+  text-align: center;
+}
+
+.completed-display{
+  color: #28B463;
+}
+
+/* Friends */
+.friends-button{
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.friends-button:hover{
+  background-color: #fff;
+  color: #000;
+}
 
 /*
   Tablet and mobile

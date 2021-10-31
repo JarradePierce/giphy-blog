@@ -1,35 +1,45 @@
 <div class='jumbotron' id='user-jumbo'>
   <h2 class='username-header'><%= @user.username %></h2>
-
-  <% if current_user.id == @user.id %>
-  <ul class='user-card-button-list'>
-    <li class='card-button'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %></li>
-    <li class='card-button'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
-  </ul>
-  <% end %>
+  <h4 class='user-points'>Points: <%= @user.points %></h4>
 </div>
 
+  <% if current_user.id == @user.id %>
+  <ul class="nav nav-pills justify-content-center">
+    <li class='nav-link'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %></li>
+    <li class='nav-link'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
+    <li class='nav-link'>
+      <%= button_to "Friends", users_path(@users), method: "get", class: "btn friends-button" %>
+    </li>
+  </ul>
+  <% end %>
+
 <div class='new-blog-form-container'>
-  <h2><%= @user.points %></h2>
   <% @blogs.each do |blog| %>
     <div class='col user-show-cards'>
       <div class='card'>
         <div class='card-block'>
           <% if blog.completed %>
-            <h3 class='points-display'> Completed </h3>
+            <h3 class='completed-display'> Completed </h3>
           <% else %>
           <h4 class='points-display'>Points: <%= blog.points %></h4>
           <% end %>
+
           <h3 class='card-title'><%= blog.title %></h3>
           <pre class='card-body'><%= blog.body %></pre>
-          <ul class='card-button-list'>
-            <li class='card-button'><%= button_to "Show", user_blog_path(@user, blog), :method => "get", class: "btn blog-show-button"%></li>
-              <% if current_user.id == @user.id %>
-              <li class='card-button'><%= button_to "Edit", edit_user_blog_path(@user, blog), :method => "get", class: "btn blog-edit-button"%></li>
-              <li class='card-button'><%= button_to "Delete", user_blog_path(@user, blog), :method => "delete", class: "btn blog-delete-button" %></li>
-              <li class='card-button'><%= button_to blog.category.title, user_category_path(@user, blog.category), :method => "get", class: "btn blog-category-button" %></li>
+
+          <!-- note controls -->
+          <% if blog.user_id == current_user.id %>
+            <ul class='card-button-list'>
+              <li class='card-button'><%= button_to "Show", user_blog_path(@user, blog), :method => "get", class: "btn blog-show-button"%></li>
+                <% if current_user.id == @user.id %>
+                <li class='card-button'><%= button_to "Edit", edit_user_blog_path(@user, blog), :method => "get", class: "btn blog-edit-button"%></li>
+                <li class='card-button'><%= button_to "Delete", user_blog_path(@user, blog), :method => "delete", class: "btn blog-delete-button" %></li>
+                <li class='card-button'><%= button_to blog.category.title, user_category_path(@user, blog.category), :method => "get", class: "btn blog-category-button" %></li>
+              <% end %>
+            <% else %>
+              <p>no controls</p>
             <% end %>
-          <ul>
+            <ul>
         </div>
       </div>
       </div>
