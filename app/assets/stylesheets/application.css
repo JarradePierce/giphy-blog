@@ -14,7 +14,7 @@
  *= require_self
  */
 body{
-  background: #000;
+  background: #fff;
 }
  pre{
    width: 95%;
@@ -38,7 +38,7 @@ body{
   text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #fff;
 }
 .card{
   height: auto;
@@ -81,113 +81,113 @@ body{
   navigation
 */
 .home-button{
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   border: 2px solid #30A9DE;
 }
 .home-button:hover{
-  color: #fff;
+  color: #000;
   background-color: #30A9DE;
 }
 .register-button{
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: 2px solid #EFDC05;
 }
 .register-button:hover{
-  background-color: #EFDC05;
+  background-color: #fff;
 }
 .signout-button{
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   border: 2px solid #E53A40;
 }
 .signout-button:hover{
   background-color: #E53A40;
-  color: #fff;
+  color: #000;
 }
 .profile-button{
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border: 2px solid #EFDC05;
 }
 .profile-button:hover{
   background-color: #EFDC05;
-  color: #fff;
+  color: #000;
 }
 
 /*
   User show page
 */
 #user-jumbo{
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   height: 10em;
   width: 96%;
   margin: 0 auto;
   margin-bottom: 1em;
-  border: 1px solid #fff;
+  border: 2px solid #D3D3D3;
 }
 .card-title{
-  color: #fff;
+  color: #000;
 }
 .card-body{
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   border-radius: 10px 10px;
   padding: 2em;
 }
 .card{
-  background: #000;
+  background: #fff;
   border-radius: 10px 10px;
-  border: 1px solid #fff;
+  border: 2px solid #D3D3D3;
 }
 .username-header{
   font-family: 'Abril Fatface', cursive;
   padding-top: .2em;
 }
 .blog-show-button{
-  background-color: #000;
+  background-color: #fff;
   border: 2px solid #3B93FC;
-  color: #fff;
+  color: #000;
 }
 .blog-show-button:hover{
   background-color: #3B93FC;
 }
 .blog-edit-button{
-  background-color: #000;
+  background-color: #fff;
   border: 2px solid #792AFA;
-  color: #fff;
+  color: #000;
 }
 .blog-edit-button:hover{
   background-color: #792AFA;
 }
 .blog-delete-button{
-  background-color: #000;
+  background-color: #fff;
   border: 2px solid #E53A40;
-  color: #fff;
+  color: #000;
 }
 .blog-delete-button:hover{
   background-color: #E53A40;
 }
 .new-blog-button{
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border: 2px solid #03CDED;
 }
 .new-blog-button:hover{
   background-color: #03CDED;
-  color: #fff;
+  color: #000;
   border: 2px solid #03CDED;
 }
 .categories-button{
-  background-color: #000;
+  background-color: #fff;
   border: 2px solid #03CDED;
-  color: #fff;
+  color: #000 ;
 }
 .categories-button:hover{
   background-color: #03CDED;
-  color: #fff;
+  color: #000;
 }
 /*
 Register page
@@ -207,8 +207,8 @@ Register page
 }
 .register-submit{
   margin-top: 10px;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border: 2px solid #fff;
 }
 .register-input{
@@ -228,15 +228,15 @@ Register page
 .new-blog-body{
   width: 60%;
   height: 300px;
-  background: #000;
-  border: 1px solid: #fff;
-  color: #fff;
+  background: #fff;
+  border: 2px solid: #d3d3d3;
+  color: #000;
 }
 .new-blog-title{
   width: 40%;
   margin-bottom: 10px;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 /*
@@ -251,7 +251,7 @@ Blogs show page
 .blog-show-body{
   margin-top: 1em;
   width: 100%;
-  color: #fff;
+  color: #000;
   border: 2px solid #fff;
   border-radius: 10px 10px;
 }
@@ -291,9 +291,9 @@ footer{
 
 /* Friends */
 .friends-button{
-  background: #000;
-  color: #fff;
-  border: 2px solid #fff;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 .friends-button:hover{
   background-color: #fff;
