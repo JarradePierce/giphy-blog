@@ -86,7 +86,7 @@ body{
   border: 2px solid #30A9DE;
 }
 .home-button:hover{
-  color: #000;
+  color: #fff;
   background-color: #30A9DE;
 }
 .register-button{
@@ -104,7 +104,7 @@ body{
 }
 .signout-button:hover{
   background-color: #E53A40;
-  color: #000;
+  color: #fff;
 }
 .profile-button{
   background-color: #fff;
@@ -113,7 +113,7 @@ body{
 }
 .profile-button:hover{
   background-color: #EFDC05;
-  color: #000;
+  color: #fff;
 }
 
 /*
@@ -153,6 +153,7 @@ body{
 }
 .blog-show-button:hover{
   background-color: #3B93FC;
+  color: #fff;
 }
 .blog-edit-button{
   background-color: #fff;
@@ -161,6 +162,7 @@ body{
 }
 .blog-edit-button:hover{
   background-color: #792AFA;
+  color: #fff;
 }
 .blog-delete-button{
   background-color: #fff;
@@ -169,6 +171,7 @@ body{
 }
 .blog-delete-button:hover{
   background-color: #E53A40;
+  color: #fff;
 }
 .new-blog-button{
   background-color: #fff;
@@ -177,7 +180,7 @@ body{
 }
 .new-blog-button:hover{
   background-color: #03CDED;
-  color: #000;
+  color: #fff;
   border: 2px solid #03CDED;
 }
 .categories-button{
@@ -187,13 +190,13 @@ body{
 }
 .categories-button:hover{
   background-color: #03CDED;
-  color: #000;
+  color: #fff;
 }
 /*
 Register page
 */
 .register-intro{
-  color: #000;
+  color: #fff;
 }
 .register-form-container{
   width: 35%;
@@ -202,20 +205,24 @@ Register page
   margin-top: 1em;
   padding: .5em;
   border-radius: 10px 10px;
-  border: 1px solid #fff;
-  background-color: #000;
+  border: 2px solid #d3d3d3;
+  background-color: #fff;
 }
 .register-submit{
   margin-top: 10px;
   background-color: #fff;
   color: #000;
-  border: 2px solid #fff;
+  border: 2px solid #03CDED;
+}
+.register-submit:hover{
+  background-color: #03CDED;
+  color: #fff;
 }
 .register-input{
   margin-top: 8px;
 }
 #new-user-jumbo{
-  background-color: #000;
+  background-color: #fff;
 }
 
 /*
@@ -296,8 +303,8 @@ footer{
   border: 2px solid #000;
 }
 .friends-button:hover{
-  background-color: #fff;
-  color: #000;
+  background-color: #d3d3d3;
+  color: #fff;
 }
 
 /*
