@@ -1,0 +1,362 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body{
+  background: #fff;
+}
+ pre{
+   width: 95%;
+   white-space: pre-wrap;
+ }
+
+ /* Containers and cards */
+ .container{
+  width: 75%;
+  font-family: 'Questrial', sans-serif;
+ }
+ .icon{
+  font-family: 'Abril Fatface', cursive;
+  color: #000;
+ }
+.nav-item{
+  margin-left :1em;
+  margin-right: 1em;
+}
+.jumbotron{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.card{
+  height: auto;
+  margin-top: 10px;
+  padding: 0;
+}
+.card-block{
+
+}
+#blog-show-card{
+  width: 70%;
+  margin: 0 auto;
+}
+.card-text{
+  color: #fff;
+  text-align: center;
+}
+.card-title{
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.card-button-list{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.user-card-button-list{
+  text-align: center;
+  padding: 0;
+  margin-top: 4em;
+}
+.card-button{
+  display: inline-block;
+}
+.card-img-top{
+  width: 100%;
+}
+
+/*
+  navigation
+*/
+.home-button{
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #30A9DE;
+}
+.home-button:hover{
+  color: #fff;
+  background-color: #30A9DE;
+}
+.register-button{
+  background: #fff;
+  color: #000;
+  border: 2px solid #EFDC05;
+}
+.register-button:hover{
+  background-color: #fff;
+}
+.signout-button{
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #E53A40;
+}
+.signout-button:hover{
+  background-color: #E53A40;
+  color: #fff;
+}
+.profile-button{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #EFDC05;
+}
+.profile-button:hover{
+  background-color: #EFDC05;
+  color: #fff;
+}
+
+/*
+  User show page
+*/
+#user-jumbo{
+  background-color: #fff;
+  color: #000;
+  height: 10em;
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border: 2px solid #D3D3D3;
+}
+.card-title{
+  color: #000;
+}
+.card-body{
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px 10px;
+  padding: 2em;
+}
+.card{
+  background: #fff;
+  border-radius: 10px 10px;
+  border: 2px solid #D3D3D3;
+}
+.username-header{
+  font-family: 'Abril Fatface', cursive;
+  padding-top: .2em;
+}
+.blog-show-button{
+  background-color: #fff;
+  border: 2px solid #3B93FC;
+  color: #000;
+}
+.blog-show-button:hover{
+  background-color: #3B93FC;
+  color: #fff;
+}
+.blog-edit-button{
+  background-color: #fff;
+  border: 2px solid #792AFA;
+  color: #000;
+}
+.blog-edit-button:hover{
+  background-color: #792AFA;
+  color: #fff;
+}
+.blog-delete-button{
+  background-color: #fff;
+  border: 2px solid #E53A40;
+  color: #000;
+}
+.blog-delete-button:hover{
+  background-color: #E53A40;
+  color: #fff;
+}
+.new-blog-button{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #03CDED;
+}
+.new-blog-button:hover{
+  background-color: #03CDED;
+  color: #fff;
+  border: 2px solid #03CDED;
+}
+.categories-button{
+  background-color: #fff;
+  border: 2px solid #03CDED;
+  color: #000 ;
+}
+.categories-button:hover{
+  background-color: #03CDED;
+  color: #fff;
+}
+/*
+Register page
+*/
+.register-intro{
+  color: #fff;
+}
+.register-form-container{
+  width: 35%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: .5em;
+  border-radius: 10px 10px;
+  border: 2px solid #d3d3d3;
+  background-color: #fff;
+}
+.register-submit{
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #03CDED;
+}
+.register-submit:hover{
+  background-color: #03CDED;
+  color: #fff;
+}
+.register-input{
+  margin-top: 8px;
+}
+#new-user-jumbo{
+  background-color: #fff;
+}
+
+/*
+ New Blog page
+*/
+.blog-form-container{
+  border: 1px solid #fff;
+  padding: 1em;
+}
+.new-blog-body{
+  width: 60%;
+  height: 300px;
+  background: #fff;
+  border: 2px solid: #d3d3d3;
+  color: #000;
+}
+.new-blog-title{
+  width: 40%;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #000;
+}
+
+/*
+Blogs show page
+*/
+.card-text{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+}
+.blog-show-body{
+  margin-top: 1em;
+  width: 100%;
+  color: #000;
+  border: 2px solid #fff;
+  border-radius: 10px 10px;
+}
+.giphy-img{
+  width: 100%;
+  height: 20em;
+  padding-bottom: 2em;
+}
+
+/*
+Category
+ */
+.category-notes-list{
+  margin-bottom: 1em;
+}
+
+/*
+  footer
+ */
+footer{
+  margin-top: 4em;
+  border-top: 2px solid #ABB8B8;
+}
+
+/* points */
+.points-display{
+  color: #fff;
+}
+
+.user-points{
+  text-align: center;
+  color: #28B463;
+}
+
+.completed-display{
+  color: #28B463;
+}
+
+/* Friends */
+.friends-button{
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+.friends-button:hover{
+  background-color: #d3d3d3;
+  color: #fff;
+}
+
+/*
+  Tablet and mobile
+*/
+@media (max-width: 950px) and (min-width: 200px){
+  /*
+  main container
+  */
+  .container{
+    width: 100%;
+    padding: 0;
+  }
+  .nav-item{
+    margin: 0;
+    padding: 0;
+  }
+  .col.user-show-cards{
+    width: 100%;
+    padding: 0;
+  }
+
+/*
+  Login form
+*/
+  .email-field{
+    margin-bottom: .2em;
+  }
+  .password-field{
+    margin-bottom: .2em;
+  }
+
+/*
+  register page
+*/
+  .register-form-container{
+    width: 100%;
+  }
+
+  /*
+  blogs show page
+  */
+  #blog-show-card{
+    width: 100%;
+  }
+
+  /*
+    blog new page
+  */
+  .new-blog-body{
+    width: 100%;
+  }
+}
