@@ -10,9 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 body{
   background: #fff;
 }
@@ -28,7 +29,7 @@ body{
  }
  .icon{
   font-family: 'Abril Fatface', cursive;
-  color: #000;
+  color: #fff;
  }
 .nav-item{
   margin-left :1em;
