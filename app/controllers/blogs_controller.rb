@@ -94,6 +94,7 @@ class BlogsController < ApplicationController
     end
   end
 
+
   private
 
   def blog_params
