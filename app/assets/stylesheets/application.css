@@ -18,7 +18,11 @@ body{
 }
  pre{
    width: 95%;
-   white-space: pre-wrap;
+   white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
  }
 
  /* Containers and cards */
@@ -35,18 +39,25 @@ body{
   margin-right: 1em;
 }
 .jumbotron{
-  text-align: center;
   margin: 0;
   padding: 0;
   background-color: #fff;
+}
+.username-header{
+  margin-left: 1em;
+  font-size: 25px;
+}
+.user-points{
+  margin-left: 1em;
+  color: #28B463;
 }
 .card{
   height: auto;
   margin-top: 10px;
   padding: 0;
 }
-.card-block{
-
+.new-blog-form-container{
+  margin: 0 auto;
 }
 #blog-show-card{
   width: 70%;
@@ -80,6 +91,14 @@ body{
 /*
   navigation
 */
+.menu-container{
+  margin: 0 auto;
+  height: auto;
+  width: 95%;
+}
+.menu-container ul li{
+  width: 100%;
+}
 .home-button{
   color: #000;
   background-color: #fff;
@@ -288,10 +307,6 @@ footer{
   color: #fff;
 }
 
-.user-points{
-  text-align: center;
-  color: #28B463;
-}
 
 .completed-display{
   color: #28B463;
@@ -311,12 +326,12 @@ footer{
 /*
   Tablet and mobile
 */
-@media (max-width: 950px) and (min-width: 200px){
+@media (max-width: 650px) and (min-width: 100px){
   /*
   main container
   */
   .container{
-    width: 100%;
+    width: 95%;
     padding: 0;
   }
   .nav-item{
@@ -326,6 +341,22 @@ footer{
   .col.user-show-cards{
     width: 100%;
     padding: 0;
+  }
+  .jumbotron{
+    text-align: center;
+  }
+  .user-points{
+    margin: 0;
+  }
+  .username-header{
+    margin: 0;
+    padding: .5em;
+  }
+
+  /* menu */
+  .menu-container{
+    padding-left: 210px;
+    overflow-x: auto;
   }
 
 /*

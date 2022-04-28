@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   post '/login' => 'sessions#create'
   get '/login' => 'sessions#new'
+  
+  get '/users/:id/completed', to: 'users#completed', as: 'completed'
+  get '/users/:id/incomplete', to: 'users#incomplete', as: 'incomplete'
 
   root "users#new"
 end

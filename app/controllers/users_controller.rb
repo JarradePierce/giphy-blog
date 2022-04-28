@@ -16,6 +16,32 @@ class UsersController < ApplicationController
     end
   end
 
+  def completed
+    @user = find_user
+    @completed_blogs = []
+    @blogs = @user.blogs
+
+    @blogs.each do |blog|
+      if blog.completed
+        @completed_blogs.push(blog)
+      end
+    end
+    @completed_blogs
+  end
+
+  def incomplete
+    @user = find_user
+    @incomplete_blogs = []
+    @blogs = @user.blogs
+
+    @blogs.each do |blog|
+      if blog.completed != true
+        @incomplete_blogs.push(blog)
+      end
+    end
+    @incomplete_blogs
+  end
+
   def new
     @user = User.new
   end
