@@ -1,3 +1,5 @@
+<%= render partial: 'shared/menu' %>
+
 <div class='card blog-show-card' id='blog-show-card'>
   <div class='card-block'>
     <% @giphys.each do |giphy| %>
@@ -8,5 +10,6 @@
     <div class='card-text blog-show-body'>
       <pre class='card-body'><%= @blog.body %></pre>
     </div>
+    <%= render partial: 'shared/notes-controls' %>
   </div>
 </div>

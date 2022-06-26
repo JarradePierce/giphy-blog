@@ -1,0 +1,8 @@
+<ul class='card-button-list'>
+  <li class='card-button'><%= button_to "Show", user_blog_path(@user, @blog), :method => "get", class: "btn blog-show-button"%></li>
+  <% if current_user.id == @user.id %>
+  <li class='card-button'><%= button_to "Edit", edit_user_blog_path(@user, @blog), :method => "get", class: "btn blog-edit-button"%></li>
+  <li class='card-button'><%= button_to "Delete", user_blog_path(@user, @blog), :method => "delete", class: "btn blog-delete-button" %></li>
+  <li class='card-button'><%= button_to @blog.category.title, user_category_path(@user, @blog.category), :method => "get", class: "btn blog-category-button" %></li>
+  <% end %>
+<ul>

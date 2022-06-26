@@ -41,6 +41,7 @@ class BlogsController < ApplicationController
 
   def show
     @blog = find_blog
+    @user = @blog.user
     @giphys = find_giphy(@blog)
   end
 
