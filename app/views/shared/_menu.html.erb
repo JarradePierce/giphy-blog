@@ -6,16 +6,16 @@
 <div class="menu-container">
 <% if current_user.id == @user.id %>
   <ul class="nav nav-pills menu-ul justify-content-center">
-    <li class='nav-link'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button" %></li>
-    <li class='nav-link'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button" %></li>
-    <li class='nav-link'>
-      <%= button_to "Completed", completed_path(@user), method: "get", class: "btn completed-button" %>
+    <li class='nav-link profile-menu-link'><%= button_to "New Note", new_user_blog_path(@user), method: "get", class: "btn new-blog-button profile-menu-links-button" %></li>
+    <li class='nav-link profile-menu-link'><%= button_to "Categories", user_categories_path(@user), method: "get", class: "btn categories-button profile-menu-links-button" %></li>
+    <li class='nav-link profile-menu-link'>
+      <%= button_to "Completed", completed_path(@user), method: "get", class: "btn completed-button profile-menu-links-button" %>
     </li>
-    <li class='nav-link'>
-      <%= button_to "Incomplete", incomplete_path(@user), method: "get", class: "btn incomplete-button" %>
+    <li class='nav-link profile-menu-link'>
+      <%= button_to "Incomplete", incomplete_path(@user), method: "get", class: "btn incomplete-button profile-menu-links-button" %>
     </li>
-    <li class='nav-link'>
-      <%= button_to "Friends", user_path(@user), method: "get", class: "btn friends-button" %>
+    <li class='nav-link profile-menu-link'>
+      <%= button_to "Friends", user_path(@user), method: "get", class: "btn friends-button profile-menu-links-button" %>
     </li>
   </ul>
 <% end %>
