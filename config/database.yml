@@ -22,5 +22,8 @@ test:
   database: db/test
 
 production:
+  DATABASE_URL=$(heroku config:get DATABASE_URL -a evening-tundra-98540)
+
+production:
   <<: *default
   database: db/production
